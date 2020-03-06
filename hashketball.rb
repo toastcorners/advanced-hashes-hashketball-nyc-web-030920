@@ -111,12 +111,12 @@ require "pry"
 
 def num_points_scored(player_lookup)
   hash = game_hash
-  hash.each do |location, team_data|
-  team_data.each do |attribute, data|
+  hash.each do |location, team|
+  team.each do |attribute, data|
     if attribute == :players
     data.each do |player|
       if player[:player_name] == player_lookup
-        return [player][:points]
+        return player[:points]
       end
   end
 end
