@@ -160,9 +160,16 @@ hash = game_hash
 hash.each do |location, team|
   if team[:team_name] == input
     team.each do |details, data|
-      binding.pry
+      if details == :players
+        data.each do |name|
+          name[:number]
 end
-  
+end
+end
+end
+end
+end
+
 
 
 
