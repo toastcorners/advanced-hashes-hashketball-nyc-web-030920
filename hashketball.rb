@@ -172,6 +172,22 @@ end
 return num
 end
 
-
-
+def player_stats(input)
+new_hash = Hash.new
+hash = game_hash
+hash.each do |location, team|
+  team.each do |details, data|
+    if details == :players
+      data.each do |names|
+        if player[:player_name] == input
+    new_hash = input.delete_if do |a, b|
+    b == :player_name
+          end
+        end
+      end
+    end
+end
+end
+return new_hash
+end
 
