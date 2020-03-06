@@ -174,14 +174,14 @@ end
 
 def player_stats(input)
 new_hash = Hash.new
-hash = game_hash
-hash.each do |location, team|
+
+game_hash.each do |location, team|
   team.each do |details, data|
     if details == :players
       data.each do |names|
         if names[:player_name] == input
     new_hash = names.delete_if do |a, b|
-    b == :player_name
+    a == :player_name
           end
         end
       end
