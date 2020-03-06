@@ -150,7 +150,7 @@ end
 
 def team_names
   hash = game_hash
-  hash.each do |location, team|
+  hash.map |location, team|
     team[:team_name]
   end
 end
