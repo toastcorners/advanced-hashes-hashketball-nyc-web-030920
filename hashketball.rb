@@ -191,3 +191,15 @@ end
 return new_hash
 end
 
+def big_shoe_rebounds
+shoe = 0
+rbnds = 0
+game_hash.each do |location, team|
+  team[:players].each do |player|
+    if player[:shoe] > shoe
+      rbnds = player[:rebounds]
+    end
+  end
+  end
+  return rbnds
+end
