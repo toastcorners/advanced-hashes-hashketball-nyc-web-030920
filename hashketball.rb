@@ -197,6 +197,7 @@ rbnds = 0
 game_hash.each do |location, team|
   team[:players].each do |player|
     if player[:shoe] > shoe
+      shoe = player[:shoe]
       rbnds = player[:rebounds]
     end
   end
