@@ -156,18 +156,20 @@ def team_names
 end
 
 def player_numbers(input)
+num = []
 hash = game_hash
 hash.each do |location, team|
   if team[:team_name] == input
     team.each do |details, data|
       if details == :players
         data.each do |name|
-          name[:number]
+          num.push(name[:number])
 end
 end
 end
 end
 end
+return num
 end
 
 
