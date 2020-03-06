@@ -179,7 +179,7 @@ hash.each do |location, team|
   team.each do |details, data|
     if details == :players
       data.each do |names|
-        if player[:player_name] == input
+        if names[:player_name] == input
     new_hash = input.delete_if do |a, b|
     b == :player_name
           end
