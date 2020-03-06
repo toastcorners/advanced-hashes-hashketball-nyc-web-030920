@@ -139,6 +139,20 @@ end
 end
 end
 
+def team_colors(input)
+  hash = game_hash
+  hash.each do |location, team|
+  team.each do |attribute, data|
+    if attribute == :players
+    data.each do |player|
+      if player[:player_name] == player_lookup
+        return player[:points]
+      end
+  end
+end
+end
+end
+end
 
 
 
